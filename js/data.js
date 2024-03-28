@@ -22,4 +22,3 @@ export const slides = [
         }
     ];
     
-    console.log(slides);
