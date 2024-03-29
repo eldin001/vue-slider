@@ -8,12 +8,25 @@ createApp({
     data(){
         return {
             slides: slides,
-            activeIndexSlide: 0,
+            activeIndexSlide: 0
         }
     },
     methods: {
-
+        nextSlide() {
+           if(this.activeIndexSlide < this.slides.length -1) {
+            this.activeIndexSlide ++;
+           } else {
+            this.activeIndexSlide = 0;
+           }
     },
+    prevSlide() {
+        if(this.activeIndexSlide > 0) {
+            this.activeIndexSlide --;
+           } else {
+            this.activeIndexSlide = this.slides.length -1;
+           }
+    }
+},
     mounted() {
 
     }
